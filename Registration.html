@@ -24,39 +24,43 @@
     body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: black;
+    
     }
-
+    form {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
     * {
     box-sizing: border-box;
     }
     .container {
     padding: 16px;
     background-color: white;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    margin-left: 500px;
+    
     
     }
     hr {
-    border: 1px solid #f1f1f1;
+    border: 1px solid white;
     margin-bottom: 2px;
     }
-    .registerbtn {
-  
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.submitbtn {
+  background-color: #04AA6D;
   color: white;
-  padding: 16px 10px;
-  margin: 0px 0;
+  margin: 5px 0;
   border: none;
-  cursor: pointer;
-  width: 70%;
+  width: 50%;
   opacity: 0.9;
-  }
+  margin-left:300px;
+}
 
-  .registerbtn:hover {
+.submitbtn:hover {
   opacity: 1;
-  }
-  .signin {
-  background-color: #f1f1f1;
-  text-align: center;
 }
 
     </style>
@@ -65,11 +69,10 @@
 </head>
 <body>
 <centre>
-    <div style="background-color: bisque;">
+    <div style="background-color:white;">
         <pre>
         <form name="Frm 1" onsubmit="cfun()">
-       
-            <div class="container">
+              <div class="container">
               <h1>Registration For LVC</h1>
               <p>Please fill in this form to create an account.</p>
               <hr>
@@ -106,10 +109,16 @@
               <label for="psw-repeat"><b>Repeat Password</b></label><br>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
               <hr>
+              </div>
+
+              <div class="submitbtn" text-align="center">
+              <button type="submit" class="submitbtn">Submit</button>
+              </div>
+  
+              <div class="container signin">
+              <p>Already have an account? <a href="#">Sign in</a>.</p>
+              </div>
               
-          
-              <input type="submit" name="submit" value="submit"/>
-            </div>
             
            
           </form>
